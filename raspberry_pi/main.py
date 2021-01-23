@@ -1,10 +1,10 @@
 import socket
 import select
-from send_ir import send_ir
+import send_ir
 
 def main():
 
-    PORT = 60006
+    PORT = 60009
     BUFFER_SIZE = 1024
     GPIO = 17
     FILE = "codes.json"
@@ -13,6 +13,7 @@ def main():
     sock.bind(("0.0.0.0",PORT))
     sock.setblocking(False)
 
+    print("Now accepting signals...")
     try:
         while True:
             try:
@@ -20,10 +21,11 @@ def main():
                 if len(read) <= 0 : continue
                 data,_ = sock.recvfrom(BUFFER_SIZE)
                 decoded = data.decode('utf-8')
-                send_ir(GPIO,FILE)
-            except socket.OSError as e:
+                send_ir.send_ir(GPIO,FILE,id=[decoded])
+            except Exception as e:
                 print(e)
     except KeyboardInterrupt as e:
+        sock.close()
         print(e)
 
 
