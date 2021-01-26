@@ -1,4 +1,6 @@
-package com.amebaownd.pikohan_niwatori.irremotecontroler.ui.main
+package com.amebaownd.pikohan_niwatori.irremotecontroler.util
+
+import com.amebaownd.pikohan_niwatori.irremotecontroler.ui.main.Repository
 
 object ServiceLoader {
     var repository: Repository? = null

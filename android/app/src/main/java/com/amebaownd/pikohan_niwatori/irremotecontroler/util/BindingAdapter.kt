@@ -1,4 +1,4 @@
-package com.amebaownd.pikohan_niwatori.irremotecontroler.ui.main
+package com.amebaownd.pikohan_niwatori.irremotecontroler.util
 
 //import androidx.databinding.BindingAdapter
 

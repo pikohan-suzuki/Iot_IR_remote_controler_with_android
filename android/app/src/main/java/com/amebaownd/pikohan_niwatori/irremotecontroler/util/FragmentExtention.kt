@@ -1,15 +1,16 @@
-package com.amebaownd.pikohan_niwatori.irremotecontroler.ui.main
+package com.amebaownd.pikohan_niwatori.irremotecontroler.util
 
 import android.app.Activity
+import android.app.Application
 import androidx.fragment.app.Fragment
 import com.amebaownd.pikohan_niwatori.irremotecontroler.util.ViewModelFactory
 
-fun Fragment.getViewModelFactory(): ViewModelFactory {
+fun Fragment.getViewModelFactory(application:Application): ViewModelFactory {
     val repository = ServiceLoader.provideRepository()
-    return ViewModelFactory(repository)
+    return ViewModelFactory(application,repository)
 }
 
-fun Activity.getViewModelFactory(): ViewModelFactory {
+fun Activity.getViewModelFactory(application:Application): ViewModelFactory {
     val repository = ServiceLoader.provideRepository()
-    return ViewModelFactory(repository)
+    return ViewModelFactory(application,repository)
 }
