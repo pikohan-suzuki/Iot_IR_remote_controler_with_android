@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.amebaownd.pikohan_niwatori.irremotecontroler.ui.main.TvFragmentViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.MainFragment">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/tv_remote_controller_background"
+                    android:gravity="center_horizontal"
+                    android:padding="12dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2">
+
+                        <Button
+                            android:id="@+id/power_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_rad_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="電源"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/program_info_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="番組情報"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/screen_display_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="画面表示"
+                            android:textColor="#FFFFFF" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/digital_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="地上"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/bs_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="BS"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/cs_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="CS"
+                            android:textColor="#FFFFFF" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/channel1_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="1"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/channel2_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="2"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/channel3_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="3"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/channel4_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="4"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/channel5_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="5"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/channel6_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="6"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/channel7_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="7"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/channel8_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="8"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/channel9_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="9"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/channel10_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="10"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/channel11_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="11"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/channel12_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="12"
+                            android:textColor="#FFFFFF"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_span="3"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/change_sound_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/tv_button_background"
+                                android:onClick="@{viewModel.onButtonClicked}"
+                                android:text="音声\n切替"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/volume_plus_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/tv_button_background"
+                                android:onClick="@{viewModel.onButtonClicked}"
+                                android:text="+"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/channel_next_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/tv_button_background"
+                                android:onClick="@{viewModel.onButtonClicked}"
+                                android:text="next"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/data_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/tv_button_background"
+                                android:onClick="@{viewModel.onButtonClicked}"
+                                android:text="データ"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_span="3"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/silent_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/tv_button_background"
+                                android:onClick="@{viewModel.onButtonClicked}"
+                                android:text="消音"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/volume_minus_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/tv_button_background"
+                                android:onClick="@{viewModel.onButtonClicked}"
+                                android:text="-"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/channel_prev_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/tv_button_background"
+                                android:onClick="@{viewModel.onButtonClicked}"
+                                android:text="prev"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/change_input_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/tv_button_background"
+                                android:onClick="@{viewModel.onButtonClicked}"
+                                android:text="入力\n切換"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_span="3"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/program_table_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/tv_rad_button_background"
+                                android:onClick="@{viewModel.onButtonClicked}"
+                                android:text="番組表"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/record_list_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/tv_blue_button_background"
+                                android:onClick="@{viewModel.onButtonClicked}"
+                                android:text="録画リスト"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_span="3"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/home_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="2dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:background="@drawable/tv_button_background"
+                                    android:onClick="@{viewModel.onButtonClicked}"
+                                    android:text="ホーム"
+                                    android:textColor="#FFFFFF"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/end_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="2dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:background="@drawable/tv_button_background"
+                                    android:onClick="@{viewModel.onButtonClicked}"
+                                    android:text="終了"
+                                    android:textColor="#FFFFFF"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <androidx.constraintlayout.widget.Guideline
+                                        android:id="@+id/guideline4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        app:layout_constraintGuide_percent="0.3" />
+
+                                    <androidx.constraintlayout.widget.Guideline
+                                        android:id="@+id/guideline3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        app:layout_constraintGuide_percent="0.7" />
+
+                                    <androidx.constraintlayout.widget.Guideline
+                                        android:id="@+id/guideline"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        app:layout_constraintGuide_percent="0.7" />
+
+                                    <androidx.constraintlayout.widget.Guideline
+                                        android:id="@+id/guideline2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        app:layout_constraintGuide_percent="0.3" />
+
+                                    <Button
+                                        android:id="@+id/up_button"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginLeft="2dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginRight="2dp"
+                                        android:layout_marginBottom="4dp"
+                                        android:background="@drawable/tv_button_background"
+                                        android:onClick="@{viewModel.onButtonClicked}"
+                                        android:text="▲"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+                                        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                                        app:layout_constraintStart_toStartOf="@+id/guideline4"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <Button
+                                        android:id="@+id/down_button"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginLeft="2dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginRight="2dp"
+                                        android:layout_marginBottom="4dp"
+                                        android:background="@drawable/tv_button_background"
+                                        android:onClick="@{viewModel.onButtonClicked}"
+                                        android:text="▼"
+                                        android:textColor="#ffffff"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                                        app:layout_constraintStart_toStartOf="@+id/up_button"
+                                        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+                                    <Button
+                                        android:id="@+id/left_button"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginStart="2dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginEnd="2dp"
+                                        android:layout_marginBottom="4dp"
+                                        android:background="#373737"
+                                        android:onClick="@{viewModel.onButtonClicked}"
+                                        android:text="←"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toTopOf="@+id/guideline"
+                                        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+                                    <Button
+                                        android:id="@+id/right_button"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginStart="2dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginEnd="2dp"
+                                        android:layout_marginBottom="4dp"
+                                        android:background="@drawable/tv_button_background"
+                                        android:onClick="@{viewModel.onButtonClicked}"
+                                        android:text="→"
+                                        android:textColor="#FFFFFF"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toTopOf="@+id/guideline"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/guideline3"
+                                        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+                                    <Button
+                                        android:id="@+id/confirm_button"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginLeft="2dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginRight="2dp"
+                                        android:layout_marginBottom="4dp"
+                                        android:background="@drawable/tv_button_background"
+                                        android:onClick="@{viewModel.onButtonClicked}"
+                                        android:text="決定"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toTopOf="@+id/guideline"
+                                        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                                        app:layout_constraintStart_toStartOf="@+id/guideline4"
+                                        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/tool_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="2dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:background="@drawable/tv_button_background"
+                                    android:onClick="@{viewModel.onButtonClicked}"
+                                    android:text="ツール"
+                                    android:textColor="#FFFFFF"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/previous_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="2dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:background="@drawable/tv_button_background"
+                                    android:onClick="@{viewModel.onButtonClicked}"
+                                    android:text="戻る"
+                                    android:textColor="#FFFFFF"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_span="3"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/blue_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="#0027FF"
+                                android:onClick="@{viewModel.onButtonClicked}" />
+
+                            <Button
+                                android:id="@+id/red_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="#FF0000"
+                                android:onClick="@{viewModel.onButtonClicked}" />
+
+                            <Button
+                                android:id="@+id/green_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="#00A123"
+                                android:onClick="@{viewModel.onButtonClicked}" />
+
+                            <Button
+                                android:id="@+id/yellow_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="#DFC800"
+                                android:onClick="@{viewModel.onButtonClicked}" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/record_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="録画"
+                            android:textColor="#FF6262"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/counter_program_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="裏番組"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/familink_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="ファミリンク"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/fast_forward_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="早戻し"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/play_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="再生"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/fast_rewind_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/tv_button_background"
+                            android:onClick="@{viewModel.onButtonClicked}"
+                            android:text="早送り"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_span="3"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/rewind_10sec_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/tv_button_background"
+                                android:onClick="@{viewModel.onButtonClicked}"
+                                android:text="10秒\n戻し"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/stop_once_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/tv_button_background"
+                                android:onClick="@{viewModel.onButtonClicked}"
+                                android:text="一時\n停止"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/stop_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/tv_button_background"
+                                android:onClick="@{viewModel.onButtonClicked}"
+                                android:text="停止"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/forward_30sec_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="2dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/tv_button_background"
+                                android:onClick="@{viewModel.onButtonClicked}"
+                                android:text="30秒\n送り"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
