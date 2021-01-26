@@ -9,35 +9,43 @@ import android.view.View
 import android.view.ViewGroup
 
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.amebaownd.pikohan_niwatori.irremotecontroler.MainActivity
 
 import com.amebaownd.pikohan_niwatori.irremotecontroler.databinding.MainFragmentBinding
+import com.amebaownd.pikohan_niwatori.irremotecontroler.util.EventObserver
+import com.amebaownd.pikohan_niwatori.irremotecontroler.util.getViewModelFactory
 
 class MainFragment :Fragment(){
 
-private val viewModel:MainFragmentViewModel by viewModels{getViewModelFactory()}
-private lateinit var mainFragmentBinding:MainFragmentBinding
+    private val viewModel:MainFragmentViewModel by viewModels{getViewModelFactory((this.activity as MainActivity).application)}
+    private lateinit var mainFragmentBinding:MainFragmentBinding
 
-        override fun onCreateView(
+    override fun onCreateView(
         inflater:LayoutInflater,
         container:ViewGroup?,
         savedInstanceState:Bundle?
-        ):View{
+    ):View{
         mainFragmentBinding=MainFragmentBinding.inflate(inflater,container,false).apply{
-        viewModel=this@MainFragment.viewModel
+            viewModel=this@MainFragment.viewModel
             lifecycleOwner=viewLifecycleOwner
-                    }
-                    return mainFragmentBinding.root
-                    }
+        }
+        return mainFragmentBinding.root
+    }
 
-                    override fun onViewCreated(view:View,savedInstanceState:Bundle?){
-                    super.onViewCreated(view,savedInstanceState)
+    override fun onViewCreated(view:View,savedInstanceState:Bundle?){
+        super.onViewCreated(view,savedInstanceState)
+        viewModel.navigateToTvEvent.observe(this.viewLifecycleOwner, EventObserver(){
+            if(it){
+                navigateToTvFragment()
+            }
+        })
+    }
 
-                    }
+    private fun navigateToTvFragment(){
+        val action = MainFragmentDirections
+            .actionMainFragmentToTvFragment()
+        findNavController().navigate(action)
+    }
 
-//    private fun navigateToAaaa(){
-//        val action = MainFragmentDirections
-//            .actionMainFragmentToRecordFragment()
-//        findNavController().navigate(action)
-//    }
-
-                    }
+}
