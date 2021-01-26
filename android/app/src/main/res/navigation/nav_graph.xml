@@ -9,6 +9,14 @@
         android:id="@+id/mainFragment"
         android:name="com.amebaownd.pikohan_niwatori.irremotecontroler.ui.main.MainFragment"
         android:label="main_fragment"
-        tools:layout="@layout/main_fragment"></fragment>
+        tools:layout="@layout/main_fragment">
+        <action
+            android:id="@+id/action_mainFragment_to_tvFragment"
+            app:destination="@id/tvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tvFragment"
+        android:name="com.amebaownd.pikohan_niwatori.irremotecontroler.ui.main.TvFragment"
+        android:label="TvFragment" />
 
 </navigation>
