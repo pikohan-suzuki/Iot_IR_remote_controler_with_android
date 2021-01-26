@@ -3,4 +3,13 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorTvButtonBackground">#373737</color>
+    <color name="colorTvButtonText">#FFFFFF</color>
+    <color name="colorTvButtonBackgroundPressed">#2E2E2E</color>
+    <color name="colorTvButtonTextPressed">#AAAAAA</color>
+    <color name="colorTvRedButton">#FF4444</color>
+    <color name="colorTvRedButtonPressed">#B52E2E</color>
+    <color name="colorTvBlueButton">#2D7CBC</color>
+    <color name="colorTvBlueButtonPressed">#1E5785</color>
 </resources>
